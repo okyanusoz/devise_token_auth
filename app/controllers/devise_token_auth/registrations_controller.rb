@@ -130,15 +130,13 @@ module DeviseTokenAuth
 
     def render_create_success
       render json: {
-        status: 'success',
-        data:   resource_data
+        status: 'success'
       }
     end
 
     def render_create_error
       render json: {
         status: 'error',
-        data:   resource_data,
         errors: resource_errors
       }, status: 422
     end
