@@ -67,10 +67,10 @@ module DeviseTokenAuth
     # Generates a random URL-safe string.
     # Example:
     #   DeviseTokenAuth::TokenFactory.secure_string
-    #   => "ADBoIaqXsEDnxIpOuumrTA"
+    #   => (86 characters long string)
     def self.secure_string
       # https://ruby-doc.org/stdlib-2.5.0/libdoc/securerandom/rdoc/Random/Formatter.html#method-i-urlsafe_base64
-      SecureRandom.urlsafe_base64
+      SecureRandom.urlsafe_base64 64
     end
 
     # Returns true if token hash is a valid token hash.
