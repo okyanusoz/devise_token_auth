@@ -112,8 +112,7 @@ module DeviseTokenAuth
 
     def render_create_error_missing_confirm_success_url
       response = {
-        status: 'error',
-        data:   resource_data
+        status: 'error'
       }
       message = I18n.t('devise_token_auth.registrations.missing_confirm_success_url')
       render_error(422, message, response)
@@ -121,8 +120,7 @@ module DeviseTokenAuth
 
     def render_create_error_redirect_url_not_allowed
       response = {
-        status: 'error',
-        data:   resource_data
+        status: 'error'
       }
       message = I18n.t('devise_token_auth.registrations.redirect_url_not_allowed', redirect_url: @redirect_url)
       render_error(422, message, response)
@@ -143,8 +141,7 @@ module DeviseTokenAuth
 
     def render_update_success
       render json: {
-        status: 'success',
-        data:   resource_data
+        status: 'success'
       }
     end
 
